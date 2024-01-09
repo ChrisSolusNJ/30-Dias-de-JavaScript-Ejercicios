@@ -1,0 +1,41 @@
+
+Ejercicios: Nivel 1
+1. Declare las siguientes variables; firstName, lastName, country, city, age, isMarried, year y asignar un valor, use el operador typeof para verificar diferentes tipos de datos.
+2. Verifique si typeof '10' es igual a 10
+3. Verifique si parseInt('9.8') es igual a 10
+4. Verifique cualquier valor booleano true o false.
+    Escriba tres declaraciones de JavaScript que proporcionen un valor verdadero.
+    Escriba tres declaraciones de JavaScript que proporcionen un valor falso.
+5. Calcule primero el resultado de la siguiente expresión de comparación sin usar console.log(). Después de decidir el resultado, confirmelo usando console.log()
+    4 > 3
+    4 >= 3
+    4 < 3
+    4 <= 3
+    4 == 4
+    4 === 4
+    4 != 4
+    4 !== 4
+    4 != '4'
+    4 == '4'
+    4 === '4'
+    Encuentre la longitud de Python y jargon y haga una declaración de comparación falsa.
+7. Calcule primero el resultado de las siguientes expresiones sin usar console.log(). Después de decidir el resultado, confirmelo usando console.log()
+    4 > 3 && 10 < 12
+    4 > 3 && 10 > 12
+    4 > 3 || 10 < 12
+    4 > 3 || 10 > 12
+    !(4 > 3)
+    !(4 < 3)
+    !(false)
+    !(4 > 3 && 10 < 12)
+    !(4 > 3 && 10 > 12)
+    !(4 === '4')
+    No hay 'on' tanto en dragon como en python
+7.Utilice el objeto Date para realizar las siguientes actividades
+    ¿Qué año es hoy?
+    ¿Qué mes es hoy con un número?
+    ¿Qué fecha es hoy?
+    ¿Qué día es hoy con un número?
+    ¿Cuál es la hora actual?
+    ¿Cuántos minutos hay actualmente?
+    Averigüe el número de segundos transcurridos desde el 1 de enero de 1970 hasta ahora.
