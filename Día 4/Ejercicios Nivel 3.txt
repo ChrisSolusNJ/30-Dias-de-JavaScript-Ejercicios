@@ -1,0 +1,2 @@
+1. Escribe un programa que diga el número de días en un mes.
+2. Escribe un programa que diga el número de días en un mes, ahora considera un año bisiesto.
