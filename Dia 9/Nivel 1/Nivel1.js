@@ -127,5 +127,108 @@ console.log(countriesSix);
 // console.log(countriesSix);
 
 //Utilice filter para filtrar los países que contengan seis letras o más en el array de países.
+//Funcion flecha explicita
 const countriesSixMore = countries.filter((country) => country.length >= 6);
 console.log(countriesSixMore);
+
+//Funcion flecha implicita
+// const countriesSixMore = countries.filter({
+//     (country) => country.length >= 6}
+// );
+// console.log(countriesSixMore);
+
+//Utilice filter para filtrar los países que empiezan por "E";
+//Funcion flecha explicita
+const countriesE = countries.filter((country) => country.startsWith('E'));
+console.log(countriesE);
+
+//Funcion flecha implicita
+// const countriesE = countries.filter({
+//     (country) => country.startsWith('E')
+// });
+// console.log(countriesE);
+
+//Utilice filter para filtrar sólo los precios con valores
+//Funcion flecha explicita
+const filteredProducts = products.filter((product) =>  typeof product.price === 'number' && !isNaN(product.price));
+console.log(filteredProducts);
+
+//Funcion flecha implicita
+// const filteredProducts = products.filter((product) => {
+//     return typeof product.price === 'number' && !isNaN(product.price);
+// });
+//   console.log(filteredProducts);
+
+//Declara una función llamada getStringLists que toma un array 
+//como parámetro y devuelve un array sólo con elementos string.
+//Funcion flecha implicita
+//Esta es una forma muy sucia de hacer este ejercicio
+function getStringLists (arr) {
+    return arr.filter((item) => typeof item === 'string');
+}
+console.log(getStringLists([1,2, 'aa', 'bb']))
+//Como funcion explicita
+const getStringListsTwo = (item) => item.filter((item) => typeof item === 'string');
+console.log(getStringListsTwo([1,5,6,'hola', 'chris']));
+
+//Usa reduce para sumar todos los números del array de números.
+const sum = numbers.reduce((acc, varAct) => acc + varAct, 0);
+console.log(sum);
+
+// Utiliza reduce para concatenar todos los países y producir esta 
+// frase: Estonia, Finland, Sweden, Denmark, Norway, y IceLand son 
+// países del norte de Europa
+const frase = countries.reduce((acc, varAct, index) => {
+  if (index === 0) {
+    return varAct;
+  }else if (index === countries.length - 1) {
+    return `${acc} y ${varAct}`;
+  } else {
+    return `${acc}, ${varAct}`;
+  }
+}, "");
+
+console.log(`${frase} son paises del norte de Europa`)
+
+// Explique la diferencia entre some y every
+/*
+Los dos comprueban si los elementos dentro de un array cumplen algunas condiciones
+sin embargo some devolvera true si al menos un elemento cumple esta condicion y
+every devolvera true si todos los elementos cumplen esta condicion
+*/
+
+// Utilice some para comprobar si la longitud de algunos nombres es 
+//superior a siete en el array de nombres.
+const namesLength = names.some((name) => name.length > 7);
+console.log(namesLength);
+
+// Utilice every para comprobar si todos los países contienen la palabra land.
+const everyCountriesLand = countries.every((country) => country.includes('land'));
+console.log(everyCountriesLand);
+
+// Explique la diferencia entre find y findIndex.
+/*
+Los dos sirven para retornar un elemento que cumple una condicion, sin embargo
+find retorna el primer elemento que cumple la condicion y
+findIndex retorna la posicion del primer elemento que cumple la condicion
+*/
+
+// Utilice find para encontrar el primer país que contenga sólo seis 
+//letras en el array de países.
+const findCountrySix = countries.find((country) => country.length === 6);
+console.log(findCountrySix);
+
+// Utilice findIndex para encontrar la posición del primer país que 
+//contenga sólo seis letras en el array de países.
+const findCountrySixIndex = countries.findIndex((country) => country.length === 6);
+console.log(findCountrySixIndex);
+
+// Utilice findIndex para encontrar la posición de Norway si 
+//no existe en el array obtendrá -1.
+const findNorway = countries.findIndex((country) => country === 'Norway');
+console.log(findNorway);
+
+// Utilice findIndex para encontrar la posición de Russia si no 
+//existe en el array obtendrá -1.
+const findRussia = countries.findIndex((country) => country === 'Russia');
+console.log(findRussia);
